@@ -31,7 +31,7 @@
     if(prev)prev.addEventListener('click',function(){tor.scrollBy({left:-krok(),behavior:'smooth'})});
     if(next)next.addEventListener('click',function(){tor.scrollBy({left:krok(),behavior:'smooth'})});
     tor.addEventListener('scroll',stan,{passive:true});
-    window.addEventListener('resize',stan);
+    window.addEventListener('resize',function(){requestAnimationFrame(stan)});
     tor.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){tor.scrollBy({left:krok(),behavior:'smooth'});e.preventDefault()}if(e.key==='ArrowLeft'){tor.scrollBy({left:-krok(),behavior:'smooth'});e.preventDefault()}});
     var start=null,sl=0,ruch=false;
     tor.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||e.button!==0)return;start=e.clientX;sl=tor.scrollLeft;ruch=false});
@@ -39,7 +39,7 @@
     window.addEventListener('pointerup',function(){if(start===null)return;start=null;if(ruch){tor.classList.remove('ciag');tor.scrollTo({left:Math.round(tor.scrollLeft/krok())*krok(),behavior:'smooth'});setTimeout(function(){ruch=false},50)}});
     tor.addEventListener('click',function(e){if(ruch){e.preventDefault();e.stopPropagation()}},true);
     tor.addEventListener('dragstart',function(e){e.preventDefault()});
-    stan();
+    requestAnimationFrame(stan); /* 1.1: bez wymuszonego przeliczenia układu w trakcie startu skryptu */
   });
 
   /* powiększanie zdjęć z przesuwaniem palcem */

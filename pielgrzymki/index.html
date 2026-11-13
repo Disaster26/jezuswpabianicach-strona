@@ -5,9 +5,540 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Pielgrzymki: terminy i zapisy &#8211; Dzieci Maryi</title>
 <meta name="robots" content="noindex, nofollow">
-<link rel="preload" as="font" type="font/woff2" href="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-latin.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/ss3-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-rdzen.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-pl.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-i-rdzen.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-i-pl.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/ss3-rdzen.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/ss3-pl.woff2" crossorigin>
 <meta name="theme-color" content="#24549A">
+<style id="dm-css">/* 1.1: fonty w małych plikach rdzenia (ASCII + polskie znaki), pełne pliki tylko dla rzadkich znaków (rozłączne unicode-range) */
+@font-face{font-family:"Lora";font-style:normal;font-weight:400 700;font-display:swap;src:url(https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-latin-ext.woff2) format("woff2");unicode-range:U+0100-0101,U+0103,U+0108-0117,U+011A-0130,U+0132-0137,U+0139-0140,U+0145-0151,U+0154-0159,U+015C-0178,U+017D-017F,U+018F,U+0192,U+01A0-01A1,U+01AF-01B0,U+01B7,U+01CD-01CE,U+01D3-01D4,U+01E4-01E9,U+01EE-01EF,U+01FE-01FF,U+0218-021B,U+021E-021F,U+0237,U+0259,U+0292,U+02C7,U+02C9,U+02DD,U+1E80-1E85,U+1E9E,U+1EF2-1EF9,U+2020,U+20AE,U+20B4,U+20B8,U+20BA,U+20BD,U+2113}
+@font-face{font-family:"Lora";font-style:normal;font-weight:400 700;font-display:swap;src:url(https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-latin.woff2) format("woff2");unicode-range:U+000D,U+00A1-00A8,U+00AA,U+00AC,U+00AE-00AF,U+00B1-00B6,U+00B8-00BA,U+00BC-00D2,U+00D4-00D6,U+00D8-00F2,U+00F4-00FF,U+0102,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+201A,U+2032-2033,U+2044,U+2122,U+2212,U+2215}
+@font-face{font-family:"Lora";font-style:normal;font-weight:400 700;font-display:swap;src:url(https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+2039-203A,U+20AC}
+@font-face{font-family:"Lora";font-style:normal;font-weight:400 700;font-display:swap;src:url(https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Lora";font-style:italic;font-weight:400 700;font-display:swap;src:url(https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-i-latin-ext.woff2) format("woff2");unicode-range:U+0100-0101,U+0103,U+0108-0117,U+011A-0130,U+0132-0137,U+0139-0140,U+0145-0151,U+0154-0159,U+015C-0178,U+017D-017F,U+018F,U+0192,U+01A0-01A1,U+01AF-01B0,U+01B7,U+01CD-01CE,U+01D3-01D4,U+01E4-01E9,U+01EE-01EF,U+01FE-01FF,U+0218-021B,U+021E-021F,U+0237,U+0259,U+0292,U+02C7,U+02C9,U+02DD,U+1E80-1E85,U+1E9E,U+1EF2-1EF9,U+2020,U+20AE,U+20B4,U+20B8,U+20BA,U+20BD,U+2113}
+@font-face{font-family:"Lora";font-style:italic;font-weight:400 700;font-display:swap;src:url(https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-i-latin.woff2) format("woff2");unicode-range:U+000D,U+00A1-00A8,U+00AA,U+00AC,U+00AE-00AF,U+00B1-00B6,U+00B8-00BA,U+00BC-00D2,U+00D4-00D6,U+00D8-00F2,U+00F4-00FF,U+0102,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+201A,U+2032-2033,U+2044,U+2122,U+2212,U+2215}
+@font-face{font-family:"Lora";font-style:italic;font-weight:400 700;font-display:swap;src:url(https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-i-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+2039-203A,U+20AC}
+@font-face{font-family:"Lora";font-style:italic;font-weight:400 700;font-display:swap;src:url(https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/lora-i-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:400 700;font-display:swap;src:url(https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/ss3-latin-ext.woff2) format("woff2");unicode-range:U+0100-0103,U+0108-0117,U+011A-0130,U+0132-0140,U+0145-0151,U+0154-0159,U+015C-0178,U+017D-0181,U+0186,U+018A,U+018D-0190,U+0192-0194,U+0196-0197,U+019A-019B,U+019E,U+01A0-01A1,U+01AF-01B1,U+01B7,U+01BF-01C3,U+01CD-01DD,U+01E2-01E7,U+01EA-01EB,U+01EE-01F0,U+01F4-01F5,U+01F7-0201,U+0204-0205,U+0208-0209,U+020C-020D,U+0218-0220,U+0222-0223,U+0226-0227,U+0237,U+023A-023E,U+0241-0245,U+0248-0249,U+0250-027B,U+027D-0285,U+0287-0292,U+0294-0295,U+0298-0299,U+029B-029F,U+02A1-02A8,U+02B0-02B4,U+02B7-02B9,U+02BD-02C1,U+02C7-02CC,U+02D0-02D7,U+02DD-02DE,U+02E0-02E4,U+02ED,U+1D25,U+1D2C,U+1D2E,U+1D30-1D31,U+1D33-1D3A,U+1D3C,U+1D3E-1D43,U+1D47-1D4B,U+1D4D,U+1D4F-1D52,U+1D56-1D58,U+1D5B,U+1D6F-1D70,U+1D79,U+1D7B,U+1D7F,U+1D9C,U+1DA0,U+1DAC,U+1DAE,U+1DB0,U+1DBB,U+1DBF,U+1E02-1E03,U+1E06-1E07,U+1E0A-1E11,U+1E16-1E17,U+1E1E-1E2B,U+1E32-1E3B,U+1E3E-1E49,U+1E52-1E53,U+1E56-1E63,U+1E66-1E67,U+1E6A-1E6F,U+1E72-1E73,U+1E7E-1E85,U+1E8E-1E97,U+1E9E-1E9F,U+1EF2-1EF9,U+2020,U+20A1,U+20A3-20A4,U+20A6-20A7,U+20A9,U+20AB,U+20AE,U+20B1-20B2,U+20B4-20B5,U+20B8-20BA,U+20BD,U+2113,U+2C60-2C62,U+2C65-2C66,U+2C71,U+2C7D,U+A722-A725,U+A74E-A74F,U+A75A-A75B,U+A764-A765,U+A779-A787,U+A789,U+A7AD-A7AE,U+A7B3,U+A7B5,U+A7F2-A7F4}
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:400 700;font-display:swap;src:url(https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/ss3-latin.woff2) format("woff2");unicode-range:U+00A1-00A8,U+00AA,U+00AC-00AF,U+00B1-00B6,U+00B8-00BA,U+00BC-00D2,U+00D4-00D6,U+00D8-00F2,U+00F4-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+2009,U+200B,U+201A,U+2032-2033,U+2044,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF}
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:400 700;font-display:swap;src:url(https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/ss3-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+2039-203A,U+20AC}
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:400 700;font-display:swap;src:url(https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/fonts/ss3-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+
+/* kolory z emblematu wspólnoty: granat kręgu i krzyża, płomień Ducha Świętego, złoto aureoli */
+:root{
+  --bg:#fff;--bg2:#F1F3F6;--ink:#1B2433;--ink2:#4A5568;--line:#D9DFE7;
+  --blue:#24549A;--blue-d:#183C70;--blue-dd:#122E57;
+  --flame:#C94A17;--flame-h:#B23F10;--orange:#E8862F;--yellow:#F2C230;--gold:#B8892E;
+  --serif:Lora,Georgia,"Times New Roman",serif;--sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --hh:72px;--wrap:1200px;--pad:clamp(16px,4vw,40px);--r:4px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh) + 12px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue)}
+a:hover{color:var(--blue-d)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+h1,h2,h3,.h3{font-family:var(--serif);font-weight:600;line-height:1.18;margin:0;color:var(--blue-dd)}
+h2{font-size:clamp(28px,3.4vw,42px)}
+h3,.h3{font-size:21px}
+p{margin:0 0 12px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;padding:8px 12px;z-index:100}
+.skip:focus{left:8px}
+.wrap{width:min(var(--wrap),100% - 2*var(--pad));margin:0 auto}
+svg use{fill:currentColor}
+[hidden]{display:none!important}
+
+/* linia drogi z przystankami (motyw marki) */
+.droga{position:relative;display:flex;justify-content:space-evenly;align-items:center;height:2px;background:repeating-linear-gradient(90deg,var(--blue) 0 7px,transparent 7px 13px)}
+.droga i{width:7px;height:7px;border-radius:50%;background:#fff;border:2px solid var(--blue)}
+.droga svg{position:absolute;right:-6px;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--gold)}
+.droga.pod{width:150px;margin:18px 0 26px;background:repeating-linear-gradient(90deg,var(--orange) 0 7px,transparent 7px 13px)}
+.droga.pod i{border-color:var(--orange)}
+.droga.pod svg{width:16px;height:16px;right:-8px}
+
+/* nagłówek */
+.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);height:var(--hh)}
+.top-in{height:100%;width:min(1400px,100% - 2*var(--pad));margin:0 auto;display:flex;align-items:center;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--blue-dd);flex:none}
+.logo:hover{color:var(--blue-dd)}
+.logo-em{width:46px;height:46px}
+.logo-t{display:flex;flex-direction:column;line-height:1.15}
+.logo-t b{font:600 22px/1.1 var(--serif)}
+.logo-t small{font-size:13.5px;color:var(--ink2);margin-top:3px}
+.nav{margin-left:auto}
+.nav-l{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nav-l a{color:var(--ink);text-decoration:none;font-weight:500;font-size:16.5px;padding:6px 0;border-bottom:2px solid transparent;white-space:nowrap}
+.nav-l a:hover{border-color:var(--orange);color:var(--ink)}
+.nav-l .current-menu-item>a,.nav-l a[aria-current=page]{color:var(--blue);border-color:var(--blue)}
+.nav-tel{display:none}
+.top-tel{display:flex;align-items:center;gap:8px;text-decoration:none;color:#fff;background:var(--blue);padding:10px 16px;border-radius:999px;font-weight:600;flex:none}
+.top-tel svg{width:18px;height:18px}
+.top-tel:hover{background:var(--blue-d);color:#fff}
+.burger{display:none}
+
+/* przyciski */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--flame);color:#fff;text-decoration:none;font:600 17px/1.1 var(--sans);padding:17px 30px;border-radius:999px;border:2px solid var(--flame);cursor:pointer;text-align:center}
+.btn:hover{background:var(--flame-h);border-color:var(--flame-h);color:#fff}
+.btn.line{background:transparent;color:var(--blue-dd);border-color:var(--blue)}
+.btn.line:hover{background:var(--blue);color:#fff}
+.btn:disabled{opacity:.6;cursor:default}
+
+/* pierwszy ekran */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:calc(100svh - var(--hh));background:var(--bg)}
+.hero-foto{order:2;position:relative;overflow:hidden;background:#3b3836}
+.hero-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.hero-txt{order:1;display:flex;align-items:center;justify-content:flex-end;padding:40px clamp(24px,5vw,80px)}
+.hero-in{width:min(560px,100%)}
+.hero h1{font-size:clamp(38px,4.2vw,60px);letter-spacing:-.01em}
+.lead{font-size:clamp(18px,1.45vw,21px);color:var(--ink2);margin:20px 0 30px;max-width:30em}
+.hero-cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.hero-tel{color:var(--ink2);text-decoration:none;font-size:17px}
+.hero-tel b{color:var(--blue-dd)}
+.trasa{display:flex;align-items:center;gap:14px;margin:44px 0 12px;font-family:var(--serif);font-size:18px;color:var(--blue-dd)}
+.trasa .droga{flex:1}
+.najblizsza{font-size:16px;color:var(--ink2);margin:0}
+.najblizsza a{color:var(--ink);text-decoration:none}
+.najblizsza a:hover{text-decoration:underline}
+
+/* sekcje */
+.sekcja{padding:clamp(64px,8vw,110px) 0}
+.jasna{background:var(--bg2)}
+.sek-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 60px;flex-wrap:wrap;margin-bottom:36px;position:relative;padding-bottom:22px}
+.sek-head::after{content:"";position:absolute;left:0;bottom:0;width:150px;height:2px;background:repeating-linear-gradient(90deg,var(--orange) 0 7px,transparent 7px 13px)}
+.sek-head p{max-width:30em;color:var(--ink2);margin:0}
+.sek-head a{font-weight:600;color:var(--flame);text-decoration:none}
+.sek-head a::after{content:" \2192"}
+.sek-head a:hover{text-decoration:underline}
+
+/* nagłówek podstrony */
+.pod-head{padding:clamp(40px,5vw,64px) 0 0;background:#fff}
+.pod-head h1{font-size:clamp(32px,4vw,52px);max-width:22em}
+.pod-head .droga.pod{margin:22px 0 0}
+.pod-opis{font-size:clamp(17px,1.4vw,20px);color:var(--ink2);max-width:40em;margin:22px 0 0}
+.sek-po-head{padding-top:clamp(36px,4vw,56px)}
+.okruchy{font-size:14.5px;color:var(--ink2);margin-bottom:14px}
+.okruchy a{color:var(--ink2);text-decoration:none}
+.okruchy a:hover{color:var(--blue);text-decoration:underline}
+.okruchy span{margin:0 4px;color:#9AA6B6}
+
+/* karty pielgrzymek */
+.karuzela{position:relative}
+.kar-tor{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*24px)/4);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 8px;cursor:grab;outline:none;overscroll-behavior-x:contain}
+.kar-tor::-webkit-scrollbar{display:none}
+.kar-tor.ciag{cursor:grabbing;scroll-snap-type:none}
+.kar-tor.ciag *{pointer-events:none}
+.karta{scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.karta-img{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;background:var(--bg2)}
+.karta-img img{width:100%;height:100%;object-fit:cover;object-position:50% 0;user-select:none;-webkit-user-drag:none;transition:transform .4s ease}
+.karta:hover .karta-img img{transform:scale(1.03)}
+.znacznik{position:absolute;left:12px;top:12px;background:var(--flame);color:#fff;font-size:13.5px;font-weight:600;padding:5px 10px;border-radius:3px}
+.znacznik.zap{background:var(--blue)}
+.karta-txt{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.karta-txt p{color:var(--ink2);font-size:16px}
+.karta h2,.karta h3{font-size:21px;margin-bottom:10px}
+.karta h2 a,.karta h3 a{color:inherit;text-decoration:none}
+.karta h2 a:hover,.karta h3 a:hover{color:var(--blue)}
+.data{display:flex;align-items:center;gap:7px;color:var(--blue)!important;font-weight:600;font-size:15px!important;margin-bottom:8px}
+.data svg{width:15px;height:15px;color:var(--gold);flex:none}
+.cena{font:600 24px/1.2 var(--serif);color:var(--blue-dd)!important;margin:auto 0 14px;padding-top:6px}
+.cena span{display:block;font:400 14.5px/1.4 var(--sans);color:var(--ink2)}
+.cena-brak{font-size:18px}
+.karta-link{font-weight:600;color:var(--flame);text-decoration:none}
+.karta-link::after{content:" \2192"}
+.karta-link:hover{text-decoration:underline;color:var(--flame-h)}
+.kar-btn{position:absolute;top:34%;z-index:2;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--blue-dd);font-size:30px;line-height:1;cursor:pointer;display:none;box-shadow:0 4px 14px rgba(18,46,87,.14)}
+.kar-btn:disabled{opacity:0;pointer-events:none}
+.kar-prev{left:-22px}.kar-next{right:-22px}
+.kar-licz{display:none;text-align:center;color:var(--ink2);font-size:15px;margin:12px 0 0}
+.bez-przewijania .kar-licz,.bez-przewijania .kar-btn{display:none!important}
+.bez-przewijania .kar-tor{cursor:auto}
+.siatka-kart{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:28px 24px}
+.zapowiedz{display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;align-items:center;margin-top:44px;padding-top:36px;border-top:1px solid var(--line)}
+.zap-plakat{border-radius:var(--r);border:1px solid var(--line);width:150px}
+.zapowiedz h3{margin-bottom:12px}
+.terminy{list-style:none;padding:0;margin:0 0 12px;display:flex;flex-wrap:wrap;gap:8px 34px}
+.terminy a{color:var(--ink);text-decoration:none}
+.terminy a:hover{text-decoration:underline}
+.terminy b{color:var(--blue);margin-right:6px}
+.zapowiedz p{color:var(--ink2);margin:0}
+
+/* galeria (przesuwana) */
+.gal-tor{grid-auto-columns:calc((100% - 3*24px)/4)}
+.gal-el{display:block;aspect-ratio:4/5;overflow:hidden;border-radius:var(--r);background:var(--bg2);scroll-snap-align:start}
+.gal-el img{width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none;transition:transform .4s ease}
+.gal-el:hover img{transform:scale(1.03)}
+
+/* medjugorie na głównej */
+.med{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px 72px;align-items:center}
+.med-txt h2{position:relative;padding-bottom:22px;margin-bottom:24px}
+.med-txt h2::after{content:"";position:absolute;left:0;bottom:0;width:150px;height:2px;background:repeating-linear-gradient(90deg,var(--orange) 0 7px,transparent 7px 13px)}
+.med-txt h3{margin:26px 0 10px}
+.med-txt .btn{margin-top:28px}
+.med-foto{margin:0;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5}
+.med-foto img{width:100%;height:100%;object-fit:cover}
+.lead2{font-size:19px;color:var(--ink2);max-width:44em;margin-bottom:10px}
+.med-kol{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 64px}
+.med-kol h2{font-size:clamp(24px,2.4vw,30px);margin-bottom:16px}
+.lista{list-style:none;padding:0;margin:0}
+.lista li{position:relative;padding:9px 0 9px 26px;border-top:1px solid var(--line)}
+.lista li::before{content:"";position:absolute;left:4px;top:18px;width:9px;height:9px;border-radius:50%;border:2px solid var(--blue);background:#fff}
+.uwaga{margin:22px 0 0;color:var(--ink2);font-size:16px}
+
+/* orędzie */
+.oredzie{background:var(--blue-d);color:#fff;padding:clamp(60px,7vw,96px) 0}
+.or-in{display:flex;gap:28px;align-items:flex-start;max-width:900px}
+.or-gw{width:34px;height:34px;color:var(--yellow);flex:none;margin-top:8px}
+.oredzie blockquote{margin:0}
+.oredzie p{font:italic 400 clamp(22px,2.5vw,32px)/1.45 var(--serif);margin:0 0 18px}
+.oredzie footer{color:#C9D6EA;font-size:16px}
+
+/* przystanki = droga autokaru */
+.przystanki{list-style:none;margin:0;padding:0 0 0 6px;display:grid;grid-template-columns:minmax(0,1fr)}
+.przystanki li{position:relative;padding:0 0 24px 34px;border-left:2px dashed #9DB3D3;display:flex;flex-direction:column;min-width:0}
+.przystanki li:last-child{border-left-color:transparent;padding-bottom:0}
+.przystanki li::before{content:"";position:absolute;left:-9px;top:2px;width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid var(--blue)}
+.przystanki li.dom::before{background:var(--orange);border-color:var(--orange)}
+.przystanki li.cel::before{width:22px;height:22px;left:-12px;top:0;border:0;background:var(--gold);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.przystanki b{font:600 19px/1.25 var(--serif);color:var(--blue-dd);padding-right:84px}
+.przystanki span{font-size:15.5px;color:var(--ink2);line-height:1.45;margin-top:4px}
+.przystanki time{position:absolute;right:0;top:0;font-weight:700;color:var(--blue);font-size:15.5px}
+.przystanki.poziomo{grid-template-columns:repeat(var(--n),minmax(0,1fr));padding:0;position:relative}
+.przystanki.poziomo::before{content:"";position:absolute;left:0;right:calc(100% / var(--n) - 10px);top:9px;height:2px;background:repeating-linear-gradient(90deg,var(--blue) 0 7px,transparent 7px 13px)}
+.przystanki.poziomo li{border-left:0;padding:34px 14px 0 0}
+.przystanki.poziomo li::before{left:0;top:2px}
+.przystanki.poziomo li.cel::before{left:0;top:-1px}
+.przystanki.poziomo b{padding-right:0}
+.przystanki.poziomo span{font-size:14.5px}
+.przystanki.poziomo time{position:static;order:-1;font-size:15px;margin-bottom:4px}
+.wyjazd{font-weight:600;color:var(--ink);margin:0 0 22px}
+.wsiad{padding:36px 0 40px;border-top:1px solid var(--line)}
+.wsiad:first-of-type{border-top:0;padding-top:8px}
+.wsiad h2{font-size:clamp(24px,2.6vw,32px);margin-bottom:10px}
+.wsiad h2 a{color:inherit;text-decoration:none}
+.wsiad h2 a:hover{color:var(--blue)}
+
+/* pielgrzymka */
+.pg-gora{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:40px 64px;padding:clamp(32px,4vw,56px) 0 clamp(48px,6vw,80px);align-items:start}
+.pg-plakat a{display:block;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);cursor:zoom-in;box-shadow:0 24px 50px -30px rgba(18,46,87,.45)}
+.pg-info h1{font-size:clamp(32px,3.8vw,50px);margin:4px 0 12px}
+.rodzaj{font-size:18px;color:var(--ink2)}
+.stan{background:#FFF3E8;border-left:3px solid var(--flame);padding:12px 14px;color:var(--ink);font-weight:600}
+.ceny{margin:26px 0 28px;display:flex;flex-wrap:wrap;gap:16px 40px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ceny div{min-width:0}
+.ceny dt{font-size:14.5px;color:var(--ink2);margin-bottom:2px}
+.ceny dd{margin:0;font:600 22px/1.25 var(--serif);color:var(--blue-dd)}
+.ceny .ceny-gl dd{font-size:32px}
+.ceny small{display:block;font:400 15px/1.4 var(--sans);color:var(--ink2);margin-top:2px}
+.pg-cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.pg-spis{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.pg-spis a{border:1px solid var(--line);border-radius:999px;padding:8px 16px;text-decoration:none;color:var(--blue-dd);font-weight:600;font-size:15.5px;background:#fff}
+.pg-spis a:hover{border-color:var(--blue);color:var(--blue)}
+.pg-waska{width:min(860px,100% - 2*var(--pad))}
+.pg-sek h2{margin-bottom:0}
+.pg-sek .med-kol h2{margin-bottom:16px}
+.wplaty .lista{margin-bottom:24px}
+.konto{display:grid;gap:12px;margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 22px}
+.konto dt{font-size:14.5px;color:var(--ink2)}
+.konto dd{margin:0;font-weight:600;color:var(--ink)}
+.konto .nr{font-size:20px;letter-spacing:.02em;color:var(--blue-dd);word-break:break-word}
+
+/* treść z edytora */
+.tresc{font-size:17.5px}
+.tresc>*:first-child{margin-top:0}
+.tresc h2{font-size:clamp(25px,2.6vw,32px);margin:42px 0 14px}
+.tresc h3{font-size:clamp(20px,1.8vw,23px);margin:30px 0 10px}
+.tresc p,.tresc ul,.tresc ol{margin:0 0 16px}
+.tresc ul{padding-left:0;list-style:none}
+.tresc ul li{position:relative;padding:4px 0 4px 24px}
+.tresc ul li::before{content:"";position:absolute;left:3px;top:13px;width:8px;height:8px;border-radius:50%;border:2px solid var(--blue);background:#fff}
+.tresc ol{padding-left:22px}
+.tresc ol li{padding:4px 0 4px 4px}
+.tresc ol li::marker{font-family:var(--serif);font-weight:600;color:var(--blue)}
+.tresc strong,.tresc b{font-weight:600;color:var(--ink)}
+.tresc figure{margin:28px 0}
+.tresc figcaption{font-size:14.5px;color:var(--ink2);margin-top:8px}
+.tresc img{border-radius:var(--r)}
+.tresc blockquote{margin:28px 0;padding:4px 0 4px 22px;border-left:3px solid var(--gold);font:italic 400 20px/1.5 var(--serif);color:var(--blue-dd)}
+.tresc .wp-block-gallery{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px!important;margin:28px 0}
+.tresc .wp-block-gallery figure.wp-block-image{margin:0!important;width:auto!important;aspect-ratio:1/1;overflow:hidden;position:relative;border-radius:var(--r)}
+.tresc .wp-block-gallery figure.wp-block-image img{width:100%;height:100%!important;object-fit:cover;border-radius:0;cursor:zoom-in;transition:transform .4s ease}
+.tresc .wp-block-gallery figure.wp-block-image:hover img{transform:scale(1.03)}
+.tresc .wp-block-gallery figure.wp-block-image figcaption{position:absolute;left:0;right:0;bottom:0;margin:0;padding:22px 10px 8px;font-size:13px;color:#fff;background:linear-gradient(transparent,rgba(10,20,40,.7));text-align:left;pointer-events:none}
+.tresc .alignwide{width:min(1200px,100vw - 2*var(--pad));margin-left:50%;transform:translateX(-50%)}
+.zrodla{font-size:13.5px;color:var(--ink2);margin-top:24px;line-height:1.5}
+.zrodla a{color:var(--ink2)}
+
+/* aktualności */
+.akt-siatka{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.wpis{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.wpis-img{display:block;aspect-ratio:16/10;overflow:hidden}
+.wpis-img img{width:100%;height:100%;object-fit:cover}
+.wpis-txt{padding:20px 22px 22px}
+.wpis-txt time{font-size:14.5px;color:var(--blue);font-weight:600}
+.wpis-txt h3{margin:6px 0 10px}
+.wpis-txt h3 a{color:inherit;text-decoration:none}
+.wpis-txt h3 a:hover{color:var(--blue)}
+.wpis-txt p{color:var(--ink2);font-size:16px;margin:0}
+.wpis-foto{margin:18px 0 28px}
+.wpis-foto img{border-radius:var(--r)}
+.stronicowanie{margin-top:36px}
+.stronicowanie .nav-links{display:flex;gap:8px;flex-wrap:wrap}
+.stronicowanie a,.stronicowanie span{padding:8px 14px;border:1px solid var(--line);border-radius:var(--r);text-decoration:none}
+.stronicowanie .current{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* zapisy */
+.zap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px 72px;align-items:start}
+.zap-txt h2{margin-bottom:0}
+.zap-skrot{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:32px 72px;align-items:center}
+.zap-skrot h2{margin-bottom:0}
+.zap-skrot .btn{margin-top:18px}
+.kroki{margin:0;padding:0 0 0 22px}
+.kroki li{padding:6px 0 10px 6px}
+.kroki li::marker{font-family:var(--serif);font-weight:600;color:var(--blue)}
+.wsp{display:flex;gap:18px;align-items:center;margin:0}
+.wsp img{width:170px;border-radius:var(--r);background:#fff;border:1px solid var(--line);flex:none}
+.wsp figcaption{color:var(--ink2);font-size:15.5px}
+.org-mini{margin-top:30px}
+.form{background:#fff;border:1px solid var(--line);border-radius:6px;padding:clamp(22px,3vw,36px);display:grid;gap:16px;box-shadow:0 18px 40px -24px rgba(18,46,87,.25);min-width:0;scroll-margin-top:calc(var(--hh) + 16px)}
+.form h3{margin-bottom:4px}
+.pola2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:end}
+.pole{display:grid;gap:6px;font-size:15px;font-weight:600;color:var(--ink);min-width:0}
+.pole small{font-weight:400;color:var(--ink2)}
+.pole input,.pole select,.pole textarea{font:400 16px/1.4 var(--sans);color:var(--ink);border:1px solid #BFCBDB;border-radius:var(--r);padding:12px 13px;background:#fff;width:100%;min-width:0;min-height:48px}
+.pole input:focus,.pole select:focus,.pole textarea:focus{outline:2px solid var(--blue);outline-offset:0;border-color:var(--blue)}
+.pulapka{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.dodatkowe{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px 16px;margin:0;display:grid;gap:14px;min-width:0}
+.dodatkowe legend{font-weight:700;font-size:15px;color:var(--blue-dd);padding:0 6px}
+.dodatkowe>div{display:grid;gap:14px}
+.cel{margin:0;font-size:14.5px;color:var(--ink2)}
+.cel:empty{display:none}
+.zgoda{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink2);cursor:pointer}
+.zgoda input{margin-top:4px;width:18px;height:18px;accent-color:var(--blue);flex:none}
+.zgoda.opcja{color:var(--ink);font-weight:600;align-self:center;padding:12px 0}
+.zgoda small{font-weight:400;color:var(--ink2)}
+.form-info{margin:0;font-size:14.5px;color:var(--ink2)}
+.form .btn{justify-self:start}
+.form-msg{margin:0;padding:12px 14px;border-radius:var(--r);font-weight:600}
+.form-msg.ok,.form-msg.pokaz{background:#E8F4EC;color:#14532D}
+.form-msg.err{background:#FDECEA;color:#8A1C12}
+.rodo{font-size:14px;color:var(--ink2);border-top:1px solid var(--line);padding-top:12px}
+.rodo summary{cursor:pointer;font-weight:600;color:var(--blue)}
+.rodo p{margin:10px 0 0}
+
+/* kontakt */
+.kon{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 72px}
+.kon h2{margin-bottom:0}
+.kon-tel a{display:inline-flex;align-items:center;gap:12px;font:600 clamp(30px,3.4vw,42px)/1.1 var(--serif);color:var(--blue-dd);text-decoration:none}
+.kon-tel svg{width:30px;height:30px;color:var(--flame)}
+.kon-mail a{font-size:19px}
+.pozdr{font-family:var(--serif);font-style:italic;color:var(--ink2);margin-top:20px}
+.org{border-left:2px solid var(--line);padding-left:36px}
+.org h3,.org .h3{margin-bottom:12px}
+.org p{color:var(--ink2)}
+.org-mini{border-left:0;padding-left:0}
+.ceot{display:flex;gap:10px;align-items:flex-start;color:var(--ink)!important;font-weight:600;background:var(--bg2);padding:12px 14px;border-radius:var(--r)}
+.jasna .ceot{background:#fff}
+.ceot svg{width:18px;height:18px;color:var(--gold);flex:none;margin-top:3px}
+.map{margin-top:48px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);aspect-ratio:21/8;background:var(--bg2)}
+.map iframe{display:block;width:100%;height:100%;border:0}
+.map-zast{height:100%;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;padding:28px}
+.map-zast b{font-family:var(--serif);font-size:20px;color:var(--blue-dd)}
+.map-zast p{color:var(--ink2);margin:0 0 6px}
+
+/* stopka */
+.stopka{background:var(--blue-dd);color:#C9D6EA;font-size:15px}
+.stopka a{color:#E4ECF7;text-decoration:none}
+.stopka a:hover{color:#fff;text-decoration:underline}
+.st-gora{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);gap:28px 48px;padding:44px 0 30px}
+.st-logo{display:flex;align-items:center;gap:10px;color:#fff;font-family:var(--serif);font-size:19px;margin-bottom:12px}
+.st-logo svg{width:36px;height:36px;background:#fff;border-radius:50%;padding:2px}
+.st-org p{margin:0 0 8px}
+.st-ceot{display:flex;gap:8px;align-items:flex-start;color:#fff}
+.st-ceot svg{width:15px;height:15px;color:var(--yellow);flex:none;margin-top:4px}
+.st-kol{display:flex;flex-direction:column;gap:8px}
+.st-kol b{color:#fff;font-family:var(--serif);font-size:17px;font-weight:600;margin-bottom:2px}
+.st-dol{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.14);padding:18px 0 22px;font-size:14.5px}
+.stopka .wylinka-badge{color:#C9D6EA}
+.stopka .wylinka-badge:hover{text-decoration:none;color:#fff}
+
+/* pasek mobilny */
+.mob{display:none}
+
+/* powiększanie zdjęć */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(10,18,34,.94);display:flex;align-items:center;justify-content:center;padding:56px 70px}
+.lb-f{margin:0;display:flex;flex-direction:column;align-items:center;max-width:100%;max-height:100%}
+.lb-f img{max-width:100%;max-height:calc(100svh - 150px);object-fit:contain;border-radius:3px;user-select:none}
+.lb-f figcaption{color:#DCE5F2;font-size:15px;margin-top:12px;text-align:center;max-width:60em}
+.lb button{position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;width:48px;height:48px;border-radius:50%;font-size:30px;line-height:1;cursor:pointer}
+.lb button:hover{background:rgba(255,255,255,.22)}
+.lb-x{top:14px;right:14px}
+.lb-p{left:14px;top:50%;transform:translateY(-50%)}
+.lb-n{right:14px;top:50%;transform:translateY(-50%)}
+.lb.jedno .lb-p,.lb.jedno .lb-n{display:none}
+.lb-l{position:absolute;top:24px;left:22px;color:#DCE5F2;font-size:15px;margin:0}
+body.lb-otw{overflow:hidden}
+
+/* zgody cookies */
+.cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:80;max-width:820px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 20px 50px rgba(18,46,87,.25);padding:16px 18px;display:none;gap:16px;align-items:center}
+.cookie.on{display:flex}
+.cookie p{margin:0;font-size:15px;color:var(--ink2);line-height:1.45}
+.cookie p b{color:var(--ink)}
+.ck-ust{display:grid;gap:8px;margin-top:12px}
+.cookie .cb{display:flex;gap:10px;flex:none;flex-wrap:wrap}
+.cookie .btn{padding:11px 18px;font-size:15px;min-height:44px}
+.cookie.ust{flex-direction:column;align-items:stretch}
+
+/* znak Wylinki (oficjalny fragment) */
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.karta-img img,.gal-el img{transition:none}}
+
+/* niskie ekrany komputerów */
+@media (min-width:761px) and (max-height:820px){
+  .hero h1{font-size:clamp(34px,3.6vw,50px)}
+  .lead{margin:16px 0 24px}
+  .trasa{margin:30px 0 10px}
+}
+@media (max-width:1280px){
+  .nav-l{gap:16px}
+  .nav-l a{font-size:16px}
+  .top-tel span{display:none}.top-tel{padding:11px}
+}
+@media (max-width:1180px){
+  .kar-tor,.gal-tor{grid-auto-columns:calc((100% - 2*24px)/3)}
+  .przystanki.poziomo{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:34px}
+  .przystanki.poziomo::before{display:none}
+  .przystanki.poziomo li{border-top:2px dashed #9DB3D3;padding-top:30px}
+  .przystanki.poziomo li::before{top:-9px}
+  .przystanki.poziomo li.cel::before{top:-12px}
+  .akt-siatka{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (hover:hover) and (min-width:761px){.kar-btn{display:block}}
+@media (max-width:1080px){
+  :root{--hh:64px}
+  .nav{position:fixed;top:var(--hh);left:0;right:0;max-height:calc(100svh - var(--hh));overflow-y:auto;background:#fff;border-bottom:1px solid var(--line);padding:6px var(--pad) 22px;transform:translateY(-120%);visibility:hidden;transition:transform .25s ease,visibility .25s;box-shadow:0 18px 30px -18px rgba(18,46,87,.3);margin:0}
+  .nav.otw{transform:none;visibility:visible}
+  .nav-l{flex-direction:column;gap:0}
+  .nav-l a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:18px;line-height:1.45}
+  .nav-l a:hover{border-color:var(--line)}
+  .nav-l .current-menu-item>a,.nav-l a[aria-current=page]{border-bottom-color:var(--line);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--blue);padding-left:12px}
+  .nav-tel{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-weight:700;font-size:19px;color:var(--blue-dd);text-decoration:none}
+  .nav-tel svg{width:20px;height:20px;color:var(--flame)}
+  .top-in{gap:12px}
+  .top-tel{margin-left:auto}
+  .burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;border:0;background:none;padding:10px;cursor:pointer}
+  .burger span{display:block;height:2px;background:var(--blue-dd);border-radius:2px;transition:transform .2s,opacity .2s}
+  .burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded=true] span:nth-child(2){opacity:0}
+  .burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media (max-width:960px){
+  .med,.med-kol,.zap,.kon,.zap-skrot{grid-template-columns:minmax(0,1fr)}
+  .med-foto{aspect-ratio:16/10}
+  .org{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:28px}
+  .org-mini{border-top:0;padding-top:0}
+  .kar-tor,.gal-tor{grid-auto-columns:calc((100% - 24px)/2)}
+  .pg-gora{grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:32px}
+  .st-gora{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .st-org{grid-column:1/-1}
+  .map{aspect-ratio:4/3}
+}
+@media (max-width:760px){
+  body{font-size:16.5px}
+  .logo-em{width:40px;height:40px}
+  .logo-t b{font-size:19px}
+  .logo-t small{font-size:12.5px}
+  .hero{display:flex;flex-direction:column;min-height:calc(100svh - var(--hh))}
+  .hero-foto{order:1;flex:1 1 auto;min-height:170px}
+  .hero-foto img{object-position:50% 12%}
+  .hero-txt{order:2;flex:none;padding:20px var(--pad) 22px;justify-content:flex-start}
+  .hero h1{font-size:clamp(27px,7.6vw,34px)}
+  .lead{font-size:16.5px;margin:10px 0 24px;line-height:1.5}
+  .hero-cta{gap:10px 16px}
+  .btn{padding:15px 24px;font-size:16.5px}
+  .hero-tel{font-size:15.5px}
+  .trasa{margin:20px 0 8px;font-size:15.5px;gap:10px}
+  .najblizsza{font-size:14.5px;line-height:1.45}
+  .kar-tor,.gal-tor{grid-auto-columns:82%;gap:14px;cursor:auto}
+  .kar-licz{display:block}
+  .karta-img{aspect-ratio:1/1}
+  .siatka-kart{grid-template-columns:minmax(0,1fr)}
+  .siatka-kart .karta{display:grid;grid-template-columns:120px minmax(0,1fr)}
+  .siatka-kart .karta-img{aspect-ratio:auto;height:100%;min-height:180px}
+  .siatka-kart .karta-txt{padding:14px 14px 16px}
+  .siatka-kart .karta-txt p:not(.data):not(.cena){display:none}
+  .siatka-kart .karta h2{font-size:19px}
+  .siatka-kart .cena{font-size:20px;margin-bottom:8px}
+  .zapowiedz{grid-template-columns:96px minmax(0,1fr);gap:18px;align-items:start}
+  .zap-plakat{width:96px}
+  .terminy{flex-direction:column;gap:6px}
+  .or-in{gap:16px}
+  .or-gw{width:26px;height:26px}
+  .przystanki.poziomo{grid-template-columns:minmax(0,1fr);row-gap:0;padding-left:6px}
+  .przystanki.poziomo li{border-top:0;padding:0 0 22px 34px;border-left:2px dashed #9DB3D3}
+  .przystanki.poziomo li:last-child{border-left-color:transparent;padding-bottom:0}
+  .przystanki.poziomo li::before{left:-9px;top:2px}
+  .przystanki.poziomo li.cel::before{left:-12px;top:0}
+  .przystanki.poziomo time{order:0;position:absolute;right:0;top:0;margin:0}
+  .przystanki.poziomo b{padding-right:70px}
+  .przystanki b{font-size:18px;padding-right:70px}
+  .pola2{grid-template-columns:minmax(0,1fr)}
+  .wsp img{width:120px}
+  .pg-gora{grid-template-columns:minmax(0,1fr);padding-top:18px}
+  .pg-plakat{order:2;max-width:340px}
+  .pg-info{order:1}
+  .ceny .ceny-gl dd{font-size:28px}
+  .pg-spis a{font-size:15px;padding:7px 13px}
+  .akt-siatka{grid-template-columns:minmax(0,1fr)}
+  .tresc{font-size:16.5px}
+  .tresc .wp-block-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important}
+  .st-gora{padding:34px 0 22px;gap:24px 16px}
+  .st-dol{padding-bottom:92px}
+  .mob{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s ease}
+  .mob.widac{transform:none}
+  .mob a{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px;font-weight:600;text-decoration:none}
+  .mob-tel{border:1.5px solid var(--blue);color:var(--blue)}
+  .mob-tel svg{width:17px;height:17px}
+  .mob-cta{background:var(--flame);color:#fff}
+  .mob-cta:hover{color:#fff}
+  body.menu-otw .mob{transform:translateY(110%)}
+  .cookie{left:10px;right:10px;bottom:10px;flex-direction:column;align-items:stretch;padding:14px}
+  .cookie .cb{gap:8px}
+  .cookie .cb .btn{flex:1 1 auto;padding:11px 12px}
+  .lb{padding:56px 10px 40px}
+  .lb-p,.lb-n{display:none}
+  .lb-f img{max-height:calc(100svh - 160px)}
+  .map{aspect-ratio:1/1}
+}
+@media (max-width:380px){
+  .logo-t small{display:none}
+  .hero h1{font-size:26px}
+}
+@media (max-width:760px) and (max-height:700px){
+  .hero-foto{min-height:150px}
+  .lead{font-size:15.5px;margin:8px 0 24px}
+  .trasa{margin:14px 0 6px}
+}
+/* jedna aktualność: karta pozioma */
+@media (min-width:761px){
+  .akt-siatka:has(>.wpis:only-child){grid-template-columns:minmax(0,1fr)}
+  .akt-siatka>.wpis:only-child{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);align-items:center}
+  .akt-siatka>.wpis:only-child .wpis-img{height:100%;aspect-ratio:auto;min-height:240px}
+  .akt-siatka>.wpis:only-child .wpis-txt{padding:28px 34px}
+}
+.pg-spis+.wsiad{margin-top:28px}
+</style>
 <link rel="icon" href="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/img/favicon.svg" type="image/svg+xml">
 <meta name="description" content="Aktualne terminy pielgrzymek Biura Dzieci Maryi: Medjugorie, Cypr, sanktuaria w Polsce. Ceny, zaliczki, miejsca wsiadania i formularz zapisu.">
 <meta property="og:description" content="Aktualne terminy pielgrzymek Biura Dzieci Maryi: Medjugorie, Cypr, sanktuaria w Polsce. Ceny, zaliczki, miejsca wsiadania i formularz zapisu.">
@@ -32,7 +563,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=global-styles-inline-css */
 </style>
 
-<link rel='stylesheet' id='dm-style-css' href='https://disaster26.github.io/jezuswpabianicach-strona/wp-content/themes/dzieci-maryi/style.css' media='all' />
 </head>
 <body class="archive post-type-archive post-type-archive-pielgrzymka wp-embed-responsive wp-theme-dzieci-maryi podstrona">
 <a class="skip" href="#tresc">Przejdź do treści</a>
@@ -74,7 +604,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <header class="pod-head"><div class="wrap"><h1>Pielgrzymki</h1><span class="droga pod" aria-hidden="true"><i></i><i></i><i></i><svg><use href="#gw"/></svg></span><p class="pod-opis">Aktualne terminy z cenami, programem, miejscami wsiadania i formularzem zapisu.</p></div></header><section class="sekcja sek-po-head">
   <div class="wrap">
           <div class="siatka-kart">
-        <article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/milejczyce-i-grabarka/" tabindex="-1" aria-hidden="true" draggable="false"><img width="533" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-533x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: Milejczyce i Grabarka, 12.12.2026" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-533x800.webp 533w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-200x300.webp 200w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-683x1024.webp 683w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-768x1152.webp 768w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka.webp 900w" /></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>12.12.2026 · 1 dzień</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/milejczyce-i-grabarka/">Milejczyce i Grabarka</a></h2><p>Obraz Najświętszego Serca Pana Jezusa z motywem Dobrego Pasterza, Msza Święta o 11.00, potem Święta Góra Grabarka i jej krzyże.</p><p class="cena">200 zł <span>z gorącym posiłkiem</span></p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/milejczyce-i-grabarka/">Program i zapisy</a></div></article><article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-sylwester-i-nowy-rok/" tabindex="-1" aria-hidden="true" draggable="false"><img width="534" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-sylwester-534x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: Medjugorie, Sylwester i Nowy Rok 2026/2027" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-sylwester-534x800.webp 534w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-sylwester-200x300.webp 200w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-sylwester.webp 600w" /></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>28.12.2026 - 05.01.2027 · 9 dni</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-sylwester-i-nowy-rok/">Medjugorie: Sylwester i Nowy Rok</a></h2><p>Sylwestrowa uczta duchowa w kościele św. Jakuba, a potem zabawa w pensjonacie. Noclegi w drodze w Chorwacji.</p><p class="cena">2500 zł <span>zaliczka 1350 zł</span></p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-sylwester-i-nowy-rok/">Program i zapisy</a></div></article><article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-objawienie-dla-mirjany-2027/" tabindex="-1" aria-hidden="true" draggable="false"><img width="569" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-marzec-569x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: Medjugorie, marzec 2027, objawienie dla Mirjany" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-marzec-569x800.webp 569w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-marzec-214x300.webp 214w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-marzec.webp 600w" /></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>13.03 - 21.03.2027 · 9 dni</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-objawienie-dla-mirjany-2027/">Medjugorie: objawienie dla Mirjany</a></h2><p>18 marca, w urodziny Mirjany, Matka Boża przychodzi do niej ze specjalnym przesłaniem. Jesteśmy wtedy na miejscu.</p><p class="cena">2500 zł <span>zaliczka 1250 zł</span></p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-objawienie-dla-mirjany-2027/">Program i zapisy</a></div></article><article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/cypr-sladami-sw-pawla/" tabindex="-1" aria-hidden="true" draggable="false"><img width="568" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-cypr-568x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: Cypr śladami św. Pawła, kwiecień 2027" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-cypr-568x800.webp 568w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-cypr-213x300.webp 213w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-cypr.webp 600w" /></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>08.04 - 15.04.2027 · 8 dni</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/cypr-sladami-sw-pawla/">Cypr śladami św. Pawła</a></h2><p>Przelot PLL LOT z Warszawy. Pafos z kolumną św. Pawła, Nikozja, Kurion, klasztor Kykkos, Famagusta i Salamina.</p><p class="cena">6200 zł <span>zaliczka 2200 zł</span></p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/cypr-sladami-sw-pawla/">Program i zapisy</a></div></article><article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-majowka-2027/" tabindex="-1" aria-hidden="true" draggable="false"><img width="565" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-565x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: charyzmatyczne pielgrzymki do Medjugorie w 2027 roku" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-565x800.webp 565w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-212x300.webp 212w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-724x1024.webp 724w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-768x1087.webp 768w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027.webp 843w" /><span class="znacznik zap">Zapowiedź</span></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>01.05 - 09.05.2027 · 9 dni</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-majowka-2027/">Medjugorie: Majówka</a></h2><p>Majówka w Medjugorie. Program i cena wkrótce.</p><p class="cena cena-brak">Szczegóły wkrótce</p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-majowka-2027/">Szczegóły</a></div></article><article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-rocznica-objawien-2027/" tabindex="-1" aria-hidden="true" draggable="false"><img width="565" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-565x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: charyzmatyczne pielgrzymki do Medjugorie w 2027 roku" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-565x800.webp 565w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-212x300.webp 212w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-724x1024.webp 724w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-768x1087.webp 768w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027.webp 843w" /><span class="znacznik zap">Zapowiedź</span></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>19.06 - 27.06.2027 · 9 dni</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-rocznica-objawien-2027/">Medjugorie: Rocznica Objawień</a></h2><p>Rocznica objawień w Medjugorie. Program i cena wkrótce.</p><p class="cena cena-brak">Szczegóły wkrótce</p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-rocznica-objawien-2027/">Szczegóły</a></div></article><article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-z-wypoczynkiem-2027/" tabindex="-1" aria-hidden="true" draggable="false"><img width="565" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-565x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: charyzmatyczne pielgrzymki do Medjugorie w 2027 roku" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-565x800.webp 565w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-212x300.webp 212w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-724x1024.webp 724w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-768x1087.webp 768w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027.webp 843w" /><span class="znacznik zap">Zapowiedź</span></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>18.08 - 26.08.2027 · 9 dni</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-z-wypoczynkiem-2027/">Medjugorie z wypoczynkiem</a></h2><p>Pielgrzymka z wypoczynkiem. Program i cena wkrótce.</p><p class="cena cena-brak">Szczegóły wkrótce</p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-z-wypoczynkiem-2027/">Szczegóły</a></div></article>      </div>
+        <article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/milejczyce-i-grabarka/" tabindex="-1" aria-hidden="true" draggable="false"><img width="533" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-533x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: Milejczyce i Grabarka, 12.12.2026" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-533x800.webp 533w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-200x300.webp 200w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-683x1024.webp 683w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-768x1152.webp 768w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-360x540.webp 360w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-540x810.webp 540w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka-720x1080.webp 720w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-grabarka.webp 900w" /></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>12.12.2026 · 1 dzień</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/milejczyce-i-grabarka/">Milejczyce i Grabarka</a></h2><p>Obraz Najświętszego Serca Pana Jezusa z motywem Dobrego Pasterza, Msza Święta o 11.00, potem Święta Góra Grabarka i jej krzyże.</p><p class="cena">200 zł <span>z gorącym posiłkiem</span></p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/milejczyce-i-grabarka/">Program i zapisy</a></div></article><article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-sylwester-i-nowy-rok/" tabindex="-1" aria-hidden="true" draggable="false"><img width="534" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-sylwester-534x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: Medjugorie, Sylwester i Nowy Rok 2026/2027" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-sylwester-534x800.webp 534w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-sylwester-200x300.webp 200w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-sylwester-360x539.webp 360w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-sylwester-540x809.webp 540w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-sylwester.webp 600w" /></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>28.12.2026 - 05.01.2027 · 9 dni</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-sylwester-i-nowy-rok/">Medjugorie: Sylwester i Nowy Rok</a></h2><p>Sylwestrowa uczta duchowa w kościele św. Jakuba, a potem zabawa w pensjonacie. Noclegi w drodze w Chorwacji.</p><p class="cena">2500 zł <span>zaliczka 1350 zł</span></p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-sylwester-i-nowy-rok/">Program i zapisy</a></div></article><article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-objawienie-dla-mirjany-2027/" tabindex="-1" aria-hidden="true" draggable="false"><img width="569" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-marzec-569x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: Medjugorie, marzec 2027, objawienie dla Mirjany" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-marzec-569x800.webp 569w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-marzec-214x300.webp 214w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-marzec-360x506.webp 360w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-marzec-540x759.webp 540w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-marzec.webp 600w" /></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>13.03 - 21.03.2027 · 9 dni</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-objawienie-dla-mirjany-2027/">Medjugorie: objawienie dla Mirjany</a></h2><p>18 marca, w urodziny Mirjany, Matka Boża przychodzi do niej ze specjalnym przesłaniem. Jesteśmy wtedy na miejscu.</p><p class="cena">2500 zł <span>zaliczka 1250 zł</span></p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-objawienie-dla-mirjany-2027/">Program i zapisy</a></div></article><article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/cypr-sladami-sw-pawla/" tabindex="-1" aria-hidden="true" draggable="false"><img width="568" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-cypr-568x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: Cypr śladami św. Pawła, kwiecień 2027" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-cypr-568x800.webp 568w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-cypr-213x300.webp 213w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-cypr-360x507.webp 360w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-cypr-540x761.webp 540w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-cypr.webp 600w" /></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>08.04 - 15.04.2027 · 8 dni</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/cypr-sladami-sw-pawla/">Cypr śladami św. Pawła</a></h2><p>Przelot PLL LOT z Warszawy. Pafos z kolumną św. Pawła, Nikozja, Kurion, klasztor Kykkos, Famagusta i Salamina.</p><p class="cena">6200 zł <span>zaliczka 2200 zł</span></p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/cypr-sladami-sw-pawla/">Program i zapisy</a></div></article><article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-majowka-2027/" tabindex="-1" aria-hidden="true" draggable="false"><img width="565" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-565x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: charyzmatyczne pielgrzymki do Medjugorie w 2027 roku" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-565x800.webp 565w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-212x300.webp 212w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-724x1024.webp 724w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-768x1087.webp 768w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-360x509.webp 360w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-540x764.webp 540w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-720x1019.webp 720w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027.webp 843w" /><span class="znacznik zap">Zapowiedź</span></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>01.05 - 09.05.2027 · 9 dni</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-majowka-2027/">Medjugorie: Majówka</a></h2><p>Majówka w Medjugorie. Program i cena wkrótce.</p><p class="cena cena-brak">Szczegóły wkrótce</p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-majowka-2027/">Szczegóły</a></div></article><article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-rocznica-objawien-2027/" tabindex="-1" aria-hidden="true" draggable="false"><img width="565" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-565x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: charyzmatyczne pielgrzymki do Medjugorie w 2027 roku" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-565x800.webp 565w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-212x300.webp 212w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-724x1024.webp 724w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-768x1087.webp 768w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-360x509.webp 360w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-540x764.webp 540w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-720x1019.webp 720w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027.webp 843w" /><span class="znacznik zap">Zapowiedź</span></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>19.06 - 27.06.2027 · 9 dni</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-rocznica-objawien-2027/">Medjugorie: Rocznica Objawień</a></h2><p>Rocznica objawień w Medjugorie. Program i cena wkrótce.</p><p class="cena cena-brak">Szczegóły wkrótce</p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-rocznica-objawien-2027/">Szczegóły</a></div></article><article class="karta"><a class="karta-img" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-z-wypoczynkiem-2027/" tabindex="-1" aria-hidden="true" draggable="false"><img width="565" height="800" src="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-565x800.webp" class="attachment-dm-karta size-dm-karta wp-post-image" alt="Plakat: charyzmatyczne pielgrzymki do Medjugorie w 2027 roku" loading="lazy" draggable="false" sizes="auto, (max-width:760px) 82vw, 300px" decoding="async" srcset="https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-565x800.webp 565w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-212x300.webp 212w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-724x1024.webp 724w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-768x1087.webp 768w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-360x509.webp 360w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-540x764.webp 540w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027-720x1019.webp 720w, https://disaster26.github.io/jezuswpabianicach-strona/wp-content/uploads/2026/11/plakat-2027.webp 843w" /><span class="znacznik zap">Zapowiedź</span></a><div class="karta-txt"><p class="data"><svg aria-hidden="true"><use href="#gw"/></svg>18.08 - 26.08.2027 · 9 dni</p><h2><a href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-z-wypoczynkiem-2027/">Medjugorie z wypoczynkiem</a></h2><p>Pielgrzymka z wypoczynkiem. Program i cena wkrótce.</p><p class="cena cena-brak">Szczegóły wkrótce</p><a class="karta-link" href="https://disaster26.github.io/jezuswpabianicach-strona/pielgrzymki/medjugorie-z-wypoczynkiem-2027/">Szczegóły</a></div></article>      </div>
       </div>
 </section>
 <section class="sekcja kontakt" id="kontakt">
@@ -82,7 +612,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <div>
       <h2>Kontakt</h2>
       <span class="droga pod" aria-hidden="true"><i></i><i></i><i></i><svg><use href="#gw"/></svg></span>      <p class="kon-tel"><a href="tel:+48601806183"><svg aria-hidden="true"><use href="#tel"/></svg>601 806 183</a></p>
-      <p class="kon-mail"><a href="mailto:&#098;&#097;tory1&#057;6&#049;&#064;wp.pl">&#098;&#097;tory1961&#064;w&#112;.p&#108;</a></p>
+      <p class="kon-mail"><a href="mailto:&#098;a&#116;&#111;&#114;y&#049;961&#064;wp.pl">&#098;&#097;t&#111;&#114;y1&#057;6&#049;&#064;&#119;&#112;.p&#108;</a></p>
       <p class="pozdr">Pozdrawiamy z modlitwą</p>
     </div>
     <div class="org">
@@ -104,7 +634,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <div class="st-kol">
       <b>Kontakt</b>
       <a href="tel:+48601806183">601 806 183</a>
-      <a href="mailto:&#098;a&#116;&#111;r&#121;&#049;9&#054;&#049;&#064;&#119;&#112;.pl">&#098;&#097;&#116;or&#121;1&#057;&#054;1&#064;&#119;&#112;.p&#108;</a>
+      <a href="mailto:b&#097;to&#114;&#121;&#049;9&#054;1&#064;w&#112;&#046;pl">&#098;&#097;&#116;&#111;&#114;y&#049;&#057;61&#064;&#119;p.&#112;&#108;</a>
           </div>
     <div class="st-kol">
       <b>Strona</b>
@@ -141,5 +671,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <button class="btn" type="button" data-consent="save" hidden>Zapisz wybór</button>
   </div>
 </div>
+<script>/* 1.1: baner widoczny od pierwszego malowania (bez czekania na site.js), gdy brak zapisanego wyboru */(function(){var v=null;try{v=JSON.parse(localStorage.getItem('dm-zgody')||'null')}catch(e){}if(!v||!(Date.now()-v.t<31536e6))document.getElementById('cookie').classList.add('on')})();</script>
 	</body>
 </html>

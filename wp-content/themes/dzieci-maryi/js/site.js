@@ -21,22 +21,28 @@
   $$('[data-karuzela]').forEach(function(k){
     var tor=$('.kar-tor',k), karty=tor.children, licz=$('.kar-licz span',k), prev=$('.kar-prev',k), next=$('.kar-next',k);
     if(!karty.length)return;
-    var krok=function(){return karty[0].getBoundingClientRect().width+parseFloat(getComputedStyle(tor).columnGap||0)};
+    /* 1.2: pozycje kolejnych zdjęć/kart (działa też przy różnych szerokościach w pasie galerii) */
+    var poz=function(j){return karty[j].offsetLeft-karty[0].offsetLeft};
+    var maks=function(){return Math.max(0,tor.scrollWidth-tor.clientWidth)};
+    var ktory=function(){var s=tor.scrollLeft,p=0;for(var j=0;j<karty.length;j++){if(poz(j)<=s+4)p=j}return p};
+    var idz=function(j){j=Math.max(0,Math.min(karty.length-1,j));tor.scrollTo({left:Math.min(poz(j),maks()),behavior:'smooth'})};
+    var dalej=function(){idz(ktory()+1)};
+    var wstecz=function(){var j=ktory();idz(tor.scrollLeft>poz(j)+4?j:j-1)};
     var stan=function(){
-      var max=tor.scrollWidth-tor.clientWidth-2;
+      var max=maks()-2;
       if(prev)prev.disabled=tor.scrollLeft<=2; if(next)next.disabled=tor.scrollLeft>=max;
       k.classList.toggle('bez-przewijania',max<=0);
-      if(licz)licz.textContent=Math.min(karty.length,Math.round(tor.scrollLeft/krok())+1);
+      if(licz)licz.textContent=tor.scrollLeft>=max&&max>0?karty.length:ktory()+1;
     };
-    if(prev)prev.addEventListener('click',function(){tor.scrollBy({left:-krok(),behavior:'smooth'})});
-    if(next)next.addEventListener('click',function(){tor.scrollBy({left:krok(),behavior:'smooth'})});
+    if(prev)prev.addEventListener('click',wstecz);
+    if(next)next.addEventListener('click',dalej);
     tor.addEventListener('scroll',stan,{passive:true});
     window.addEventListener('resize',function(){requestAnimationFrame(stan)});
-    tor.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){tor.scrollBy({left:krok(),behavior:'smooth'});e.preventDefault()}if(e.key==='ArrowLeft'){tor.scrollBy({left:-krok(),behavior:'smooth'});e.preventDefault()}});
+    tor.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){dalej();e.preventDefault()}if(e.key==='ArrowLeft'){wstecz();e.preventDefault()}});
     var start=null,sl=0,ruch=false;
     tor.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||e.button!==0)return;start=e.clientX;sl=tor.scrollLeft;ruch=false});
     window.addEventListener('pointermove',function(e){if(start===null)return;var d=e.clientX-start;if(Math.abs(d)>5){ruch=true;tor.classList.add('ciag')}if(ruch)tor.scrollLeft=sl-d});
-    window.addEventListener('pointerup',function(){if(start===null)return;start=null;if(ruch){tor.classList.remove('ciag');tor.scrollTo({left:Math.round(tor.scrollLeft/krok())*krok(),behavior:'smooth'});setTimeout(function(){ruch=false},50)}});
+    window.addEventListener('pointerup',function(){if(start===null)return;start=null;if(ruch){tor.classList.remove('ciag');var s=tor.scrollLeft,best=0;for(var j=1;j<karty.length;j++){if(Math.abs(poz(j)-s)<Math.abs(poz(best)-s))best=j}idz(best);setTimeout(function(){ruch=false},50)}});
     tor.addEventListener('click',function(e){if(ruch){e.preventDefault();e.stopPropagation()}},true);
     tor.addEventListener('dragstart',function(e){e.preventDefault()});
     requestAnimationFrame(stan); /* 1.1: bez wymuszonego przeliczenia układu w trakcie startu skryptu */
@@ -64,7 +70,7 @@
     lb.innerHTML='<button class="lb-x" type="button" aria-label="Zamknij">&times;</button><button class="lb-p" type="button" aria-label="Poprzednie">&#8249;</button><figure class="lb-f"><img alt=""><figcaption></figcaption></figure><button class="lb-n" type="button" aria-label="Następne">&#8250;</button><p class="lb-l"></p>';
     document.body.appendChild(lb);
     var im=$('img',lb),cap=$('figcaption',lb),ll=$('.lb-l',lb),akt=[],i=0,wrocDo=null;
-    var pokaz=function(n){i=(n+akt.length)%akt.length;var a=akt[i];im.src=a.href;var t=a.getAttribute('data-podpis')||'';im.alt=t||'Zdjęcie';cap.textContent=t;cap.hidden=!t;ll.textContent=akt.length>1?(i+1)+' / '+akt.length:'';lb.classList.toggle('jedno',akt.length<2)};
+    var pokaz=function(n){i=(n+akt.length)%akt.length;var a=akt[i];im.src=a.href;var t=a.getAttribute('data-podpis')||'',ia=a.querySelector('img');im.alt=t||(ia&&ia.alt)||'Zdjęcie';cap.textContent=t;cap.hidden=!t;ll.textContent=akt.length>1?(i+1)+' / '+akt.length:'';lb.classList.toggle('jedno',akt.length<2)};
     var otworz=function(l,n,a){akt=l;wrocDo=a;pokaz(n);lb.hidden=false;document.body.classList.add('lb-otw');$('.lb-x',lb).focus()};
     var zamk=function(){lb.hidden=true;document.body.classList.remove('lb-otw');im.removeAttribute('src');if(wrocDo)wrocDo.focus()};
     grupy.forEach(function(l){l.forEach(function(a,n){a.addEventListener('click',function(e){if(e.defaultPrevented)return;e.preventDefault();otworz(l,n,a)})})});
